@@ -15,4 +15,13 @@ const server = createServer(async (req, res) => {
   } catch { res.writeHead(404, { 'Content-Type': 'text/plain' }); res.end('Not found'); }
 });
 const port = Number(process.env.PORT || 4173);
+server.on('error', error => {
+  if (error && error.code === 'EADDRINUSE') {
+    console.error(`CAREERLENS could not start: port ${port} is already in use.`);
+    console.error(`Open http://localhost:${port}/ if that is the existing CAREERLENS server, or stop it before starting a new one.`);
+    process.exitCode = 1;
+    return;
+  }
+  throw error;
+});
 server.listen(port, () => console.log(`CAREERLENS running at http://localhost:${port}`));
