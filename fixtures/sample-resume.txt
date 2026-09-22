@@ -1,0 +1,10 @@
+Jordan Lee
+Backend engineer with 3 years of experience building Python services, REST APIs, and internal security tools.
+
+Experience
+Built FastAPI services for audit-event processing and used PostgreSQL for reporting.
+Worked with Linux systems, Git, networking fundamentals, and vulnerability triage.
+
+Skills
+Python, FastAPI, PostgreSQL, Linux, REST APIs, Git, Networking, Security monitoring
+
